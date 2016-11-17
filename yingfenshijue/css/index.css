@@ -6,7 +6,7 @@
 }
 .top{
   /*border:1px solid red;*/
-  background-image: url(img/75.png);
+  background-image: url(../img/75.png);
   background-size: 100% 100%;
   width:700px;
   height:70px;
