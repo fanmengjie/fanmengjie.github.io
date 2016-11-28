@@ -10,6 +10,9 @@ function fontGame() {
 	var colors = ["red","green","blue","yellow","black"];
 	var fonts = ["红","绿","蓝","黄","黑"];
 	var num = 0;
+	var timeBol = false;
+	var count = 10;
+	var clickBol = true;
 
 	//随机产生大字
 	function showRand(){
@@ -68,15 +71,45 @@ function fontGame() {
 	for (var i = 0; i < lis.length; i++) {
 		lis[i].onclick = function(){
 			//判断按键的文字和大字的颜色是否相同
-			if (this.fontIndex == colorIndex) {
+			if (this.fontIndex == colorIndex && clickBol) {
 				rule.style.opacity = 0;
 				liRand();
 				showRand();
 				num++;
-				scoring.innerHTML = "完成" + num;
+				scoring.innerHTML = "完成:" + num;
+				timeBol = true;
 			};
 		}
 	};
+
+	//计时
+	var timer = setInterval(function(){
+		if (timeBol) {
+			count--;
+			time.innerHTML = "剩余时间:" + count + "s";
+			if (count == 0) {
+				clearInterval(timer);
+				timer = null;
+				timeBol = false;
+
+				//游戏结束
+				gameOver();
+				clickBol = false;
+			};
+		};
+	},1000);
+
+	function gameOver(){
+		if (num < 2) {
+			alert("色盲级别!");
+		}else if(num < 5){
+			alert("眼神还可以!");
+		}else if(num < 10){
+			alert("NB!");
+		}else{
+			alert("非常NB!");
+		}
+	}
 
 	//初始化
 	function init(){
