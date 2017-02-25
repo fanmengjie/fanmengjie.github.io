@@ -1,0 +1,132 @@
+<!--1.做一个简单的模板-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas</title>
+
+    <style>
+        body{
+            text-align: center;
+            padding-top: 20px;
+        }
+        canvas{
+            box-shadow: 0 0 10px #333;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body onload="draw()">
+<canvas width="500" height="500" id="canvas">
+    你的浏览器太Low了，请更新~
+</canvas>
+
+<script type="text/javascript">
+    function draw(){
+        var canvas = document.getElementById('canvas');
+        if(canvas.getContext){
+            //说明支持当前浏览器，在其中写代码...
+            var ctx = canvas.getContext('2d');
+
+            setInterval(function clock(){
+                var now = new Date();
+                var second = now.getSeconds();
+                var minute = now.getMinutes();
+                var hour = now.getHours();
+                hour = hour + minute/60;
+                hour = hour > 12 ? hour - 12 : hour;
+
+                //表盘
+                ctx.beginPath();
+                ctx.lineWidth = 6;
+                ctx.arc(250,250,200,0,Math.PI*2);
+                ctx.stroke();
+                ctx.closePath();
+
+                ctx.arc(250,250,200,0,Math.PI*2);
+                ctx.fillStyle = '#ccc';
+                ctx.fill();
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.arc(250,250,5,0,Math.PI*2);
+                ctx.fillStyle = '#000';
+                ctx.fill();
+                ctx.closePath();
+
+                for(var i = 0;i < 12;i++){
+                    ctx.save();
+                    ctx.lineWidth = 7;
+                    ctx.strokeStyle = '#000';
+                    ctx.translate(250,250);
+                    ctx.rotate(30*Math.PI/180*(i));
+                    ctx.beginPath();
+                    ctx.moveTo(0,-170);
+                    ctx.lineTo(0,-190);
+                    ctx.stroke();
+                    ctx.closePath();
+                    ctx.restore();
+                }
+
+                for(var j = 0;j < 60;j++){
+                    ctx.save();
+                    ctx.lineWidth = 5;
+                    ctx.strokeStyle = '#000';
+                    ctx.translate(250,250);
+                    ctx.rotate(6*Math.PI/180*j);
+                    ctx.beginPath();
+                    ctx.moveTo(0,-180);
+                    ctx.lineTo(0,-190);
+                    ctx.stroke();
+                    ctx.closePath();
+                    ctx.restore();
+                }
+
+                //添加时针
+                ctx.save();
+                ctx.lineWidth = 5;
+                ctx.strokeStyle = '#000';
+                ctx.translate(250,250);
+                ctx.rotate(hour*30*Math.PI/180);
+                ctx.beginPath();
+                ctx.moveTo(0,-140);
+                ctx.lineTo(0,10);
+                ctx.stroke();
+                ctx.closePath();
+                ctx.restore();
+
+                //添加分针
+                ctx.save();
+                ctx.lineWidth = 3;
+                ctx.strokeStyle = 'blue';
+                ctx.translate(250,250);
+                ctx.rotate(minute*6*Math.PI/180);
+                ctx.beginPath();
+                ctx.moveTo(0,-160);
+                ctx.lineTo(0,15);
+                ctx.stroke();
+                ctx.closePath()
+                ctx.restore();
+
+                //添加秒针
+                ctx.save();
+                ctx.lineWidth = 1;
+                ctx.strokeStyle = 'red';
+                ctx.translate(250,250);
+                ctx.rotate(second*6*Math.PI/180);
+                ctx.beginPath();
+                ctx.moveTo(0,-185);
+                ctx.lineTo(0,20);
+                ctx.stroke();
+                ctx.closePath()
+                ctx.restore();
+            },1000);
+        }
+    }
+</script>
+</body>
+</html>
