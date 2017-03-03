@@ -1,0 +1,33 @@
+#div1{
+	background-color: rgb(54,58,65);
+	padding-bottom: 30px;
+}
+#header{
+	width:1000px;
+	margin: 0 auto;
+	position: relative;
+}
+.img1{
+	margin-top: 20px;
+}
+.nav{
+	position: absolute;
+	right:0;
+	top:0;
+	color:white;
+	font-size: 20px;
+	margin-top: 30px;
+
+}
+span{
+	display: inline-block;
+	padding: 10px 0px;
+	width:100px;
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+}
+span:hover{
+	background-color: black;
+	color:gray;
+}

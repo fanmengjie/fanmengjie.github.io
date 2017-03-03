@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>峰伍信息</title>
+	<link rel="stylesheet" href="resource/style.css">
+	<link rel="stylesheet" href="resource/animate.css">
+</head>
+<body>
+<div id="div1">
+	<div id="header">
+		<img class="img1" src="resource/img/logo.png" alt="">
+		<div class="nav">
+			<span id="nav_1" style="background:black;">首页</span>
+			<span id="nav_2">产品</span>
+			<span id="nav_3">关于我们</span>
+			<span id="nav_4">新闻动态</span>
+			<span id="nav_5">招贤纳士</span>
+		</div>
+		<div class="content">
+			
+		</div>
+		<div class="div2">
+			<div id="div_wechat1">
+				<img id="img1" src="resource/img/1-1F2211430360-L.png" alt="">
+				<div class="div_wechat1">微信小程序适合哪些行业</div>
+			</div>
+			<div id="div_wechat2">
+				<img id="img2" src="resource/img/1-1F221143S50-L.png" alt="">
+				<div class="div_wechat1">企业如何做好网站运营</div>
+			</div>
+			<div id="div_wechat3">
+				<img id="img3" src="resource/img/1-1F221160S53B.png" alt="">
+				<div class="div_wechat1">H5将对手机应用开发形成有</div>
+			</div>
+		</div>
+		<div class="div3">
+			<div class="div_link">
+				<a href="#">大型网站制作如何优化网</a>
+				<a href="#">大型网站制作如何优化网</a>
+			</div>
+			<div class="div_link">
+				<a href="#">互联网时代 你真的了解商</a>
+				<a href="#">中移动总结4G商用：年拉动</a>
+			</div>
+			<div class="div_link">
+				<a href="#">手机APP开发中界面设计的</a>
+				<a href="#">最新美国最佳雇主排行榜</a>
+			</div>
+		</div>
+		<!-- 添加点击按钮 -->
+		<center><button id="btn">更多新闻 >></button></center>
+	</div>
+</div>
+<!-- footer部分 -->
+<div id="div2">
+	<div class="footer">
+		<div class="footer1">
+			<h2>解决方案</h2>
+			<div class="item">
+				<div class="item1"></div>
+			</div>
+			<a href="#">网络安全</a>
+			<a href="#">企业IT服务</a>
+			<a href="#">系统集成服务</a>
+			<a href="#">应用软件开发</a>
+		</div>
+		<div class="footer1">
+			<h2>用户服务</h2>
+			<div class="item">
+				<div class="item1"></div>
+			</div>
+			<a href="#">使用条款</a>
+			<a href="#">意见反馈</a>
+			<a href="#">产品规范</a>
+			<a href="#">下载中心</a>
+		</div>
+		<div class="footer1">
+			<h2>联系我们</h2>
+			<div class="item">
+				<div class="item1"></div>
+			</div>
+			<a href="#">山东神估计难书高新区中铁财</a>
+			<a href="#">智中心3号楼1407</a>
+			<a href="#">0531-5878 2152</a>
+			<a href="#">Info@feng5.cn</a>
+		</div>
+		<div class="footer1">
+			<h2>分支机构</h2>
+			<div class="item">
+				<div class="item1"></div>
+			</div>
+			<a href="#">青岛公司(嘉信讯通)</a>
+			<a href="#">青岛市城阳区兴阳路417号</a>
+			<a href="#">0532-6673 7926</a>
+			<a href="#">Info@jiaxinInfo.com</a>
+		</div>
+		<div class="footer2">
+			<img src="resource/img/icon_wechat.png" alt="">
+			<img src="resource/img/icon_sina.png" alt="">
+			<p>Copyright © 2017 feng5.cn. All Rights Reserved.    鲁ICP备13027275号</p>
+		</div>
+	</div>
+</div>
+</body>
+
+<script type="text/javascript">
+	var div_wechat1 = document.getElementById('div_wechat1');
+	var img1 = document.getElementById('img1');
+	var div_wechat2 = document.getElementById('div_wechat2');
+	var img2 = document.getElementById('img2');
+	var div_wechat3 = document.getElementById('div_wechat3');
+	var img3 = document.getElementById('img3');
+	var nav_1 = document.getElementById('nav_1');
+	var nav_2 = document.getElementById('nav_2');
+	var nav_3 = document.getElementById('nav_3');
+	var nav_4 = document.getElementById('nav_4');
+	var nav_5 = document.getElementById('nav_5');
+	// var sS = document.getElementsByTagName('span')
+	div_wechat1.onmouseover = function(){
+		img1.className = "animated pulse";
+	}
+	div_wechat1.onmouseout = function(){
+		img1.className = "";
+	}
+	div_wechat2.onmouseover = function(){
+		img2.className = "animated pulse";
+	}
+	div_wechat2.onmouseout = function(){
+		img2.className = "";
+	}
+	div_wechat3.onmouseover = function(){
+		img3.className = "animated pulse";
+	}
+	div_wechat3.onmouseout = function(){
+		img3.className = "";
+	}
+	nav_1.onclick = function(){
+		window.location.href = 'index.html';
+	}
+	nav_2.onclick = function(){
+		window.location.href = 'chanpin/index.html';
+	}
+	nav_3.onclick = function(){
+		window.location.href = 'guanyuwomen/index.html';
+	}
+	nav_4.onclick = function(){
+		window.location.href = 'xinwendongtai/index.html';
+	}
+	nav_5.onclick = function(){
+		window.open('http://company.zhaopin.com/CC536311928.htm');
+	}
+</script>
+<!-- <script src="resource/dianji.js"></script> -->
+</html>

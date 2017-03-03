@@ -1,0 +1,165 @@
+body{margin:0;padding:0;background:#fff;
+	font-size:14px;
+	font-family:Arial,Helvetica,'STHeiti','Microsoft YaHei','sans-serif'}
+form,ul,li,p,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
+img{border:0;}
+ul,li{list-style-type:none;}
+a{color:#00007F;text-decoration:none;}
+a:hover{text-decoration:none;}
+
+#div1{
+	background-color: rgb(54,58,65);
+}
+#header{
+	width:1000px;
+	margin: 0 auto;
+	position: relative;
+	/*padding-bottom: 50px;*/
+}
+.img1{
+	margin-top: 20px;
+}
+.nav{
+	position: absolute;
+	right:0;
+	top:0;
+	color:white;
+	font-size: 20px;
+	margin-top: 30px;
+
+}
+span{
+	display: inline-block;
+	padding: 10px 0px;
+	width:100px;
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+}
+span:hover{
+	background-color: black;
+	color:gray;
+}
+.title{
+	position: relative;
+	width:1000px;
+	margin:0 auto;
+	margin-top:60px;
+	padding-bottom: 50px;
+}
+.title_img,.title_img2,.contact{
+	text-align: center;
+}
+.title_img h1{
+	position: absolute;
+	top:30px;
+	left:400px;
+	color:white; 
+}
+.title p{
+	font-size: 17px;
+	line-height: 25px;
+	color:rgb(165,170,178);
+	margin-top: 30px;
+}
+.title_img2{
+	margin-top: 40px;
+}
+.title_img2 h1{
+	position: absolute;
+	top:590px;
+	left:400px;
+	color:white;
+}
+.img_zzry{
+	text-align: center;
+	margin-top: 40px;
+}
+.contact{
+	margin-top: 60px;
+}
+.contact h1{
+	position: absolute;
+	top:1150px;
+	left:400px;
+	color:white; 
+}
+.list{
+	margin-top: 40px;
+}
+.list li{
+	background:rgb(77,83,91); 
+	width:235px;
+	height:230px;
+	display: inline-block;
+	margin-right: 10px;
+	text-align: center;
+}
+.list li h2{
+	color:white;
+	line-height: 50px;
+}
+.list li p{
+	font-size: 14px;
+
+}
+.icon{
+	text-align: center;
+	margin-top: 40px;
+}
+
+
+
+
+
+
+
+
+#div2{
+	background-color:rgb(43,45,54);
+	margin:0;
+	padding:0;
+}
+.footer{
+	width:1000px;
+	margin: 0 auto;
+	color:white;
+}
+.footer1{
+	width:24%;
+	display:inline-block;
+	margin-right: 5px; 
+}
+.footer h2{
+	line-height: 60px;
+}
+.item{
+	border:1px solid white;
+	width:75%;
+	height:2px;
+	margin-bottom: 10px;
+}
+.item1{
+	width:10%;
+	border:1px solid white;
+}
+.footer1 a{
+	line-height: 25px;
+	display: block;
+	color:white;
+}
+.footer1 a:hover{
+	color:gray;
+}
+.footer2{
+	padding:50px 0;
+}
+.footer2 p{
+	display: inline;
+	float: right;
+	margin-top: 25px;
+}
+.footer img{
+	margin-right: 30px;
+	cursor: pointer;
+}
