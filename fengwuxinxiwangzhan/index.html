@@ -5,6 +5,7 @@
 	<title>峰伍信息</title>
 	<link rel="stylesheet" href="resource/style.css">
 	<link rel="stylesheet" href="resource/animate.css">
+	<link rel="stylesheet" href="resource/swiper.min.css">
 </head>
 <body>
 <div id="div1">
@@ -18,7 +19,45 @@
 			<span id="nav_5">招贤纳士</span>
 		</div>
 		<div class="content">
-			
+			<div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+            	<img src="resource/img/pic2.png" alt="">
+            	<div id="swiper_1">
+	            	<h1>&nbsp&nbsp&nbsp&nbsp&nbsp机不可失&当机立断</h1>
+	            	<p>◆ 24小时持续追踪手机位置</p> 
+					<p>◆ 远程删除数据确保隐私安全  </p>
+					<p>◆ 远程备份数据至新手机</p>
+					<button id="s_btn1">安卓下载</button>
+				</div>
+            </div>
+            <div class="swiper-slide">
+            	<img src="resource/img/pic0.png" alt="">
+            	<div id="swiper_1">
+	            	<h1>Android系统安全解决方案</h1>
+	            	<p>◆ 拦截非法权限请求</p> 
+					<p>◆ 阻断个人信息外泄途径 </p>
+					<p>◆ 追查危险行为源</p>
+					<button id="s_btn">了解更多</button>
+				</div>
+            </div>
+            <div class="swiper-slide">
+            	<img src="resource/img/pic1.png" alt="">
+            	<div id="swiper_1">
+	            	<h1>为您打响信息安全保卫战</h1>
+	            	<p>◆ 大数据成为信息泄露的基础</p> 
+					<p>◆ 互联网+环境下面临更多安全挑战  </p>
+					<p>◆ 云计算时代数据安全模式需要改变</p>
+					<button id="s_btn">了解更多</button>
+				</div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
 		</div>
 		<div class="div2">
 			<div id="div_wechat1">
@@ -103,7 +142,7 @@
 	</div>
 </div>
 </body>
-
+<script src="resource/swiper.min.js"></script>
 <script type="text/javascript">
 	var div_wechat1 = document.getElementById('div_wechat1');
 	var img1 = document.getElementById('img1');
@@ -116,6 +155,7 @@
 	var nav_3 = document.getElementById('nav_3');
 	var nav_4 = document.getElementById('nav_4');
 	var nav_5 = document.getElementById('nav_5');
+	var s_btn1 = document.getElementById('s_btn1');
 	// var sS = document.getElementsByTagName('span')
 	div_wechat1.onmouseover = function(){
 		img1.className = "animated pulse";
@@ -150,6 +190,19 @@
 	nav_5.onclick = function(){
 		window.open('http://company.zhaopin.com/CC536311928.htm');
 	}
+
+	var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 30
+    });
+
+    s_btn1.onclick = function(){
+    	window.open("https://mobile.baidu.com/simple?action=content&docid=7904606&ala=");
+    }
 </script>
 <!-- <script src="resource/dianji.js"></script> -->
+
 </html>

@@ -6,7 +6,29 @@ img{border:0;}
 ul,li{list-style-type:none;}
 a{color:#00007F;text-decoration:none;}
 a:hover{text-decoration:none;}
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        /*background: #fff;*/
 
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
 #div1{
 	background-color: rgb(54,58,65);
 }
@@ -25,8 +47,27 @@ a:hover{text-decoration:none;}
 	color:white;
 	font-size: 20px;
 	margin-top: 30px;
-
 }
+#swiper_1 p{
+	margin-top:10px;
+	text-align: left;
+	margin-left: 50px;
+}
+#s_btn,#s_btn1{
+	background: gray;
+	opacity: 0.6;
+	padding:6px;
+	font-size: 16px;
+	margin-top: 20px;
+	margin-left: -120px;
+	border-radius: 5px;
+	cursor: pointer;
+	color:white;
+}
+#s_btn:hover{
+	opacity: 1;
+}
+
 span{
 	display: inline-block;
 	padding: 10px 0px;
